@@ -76,7 +76,7 @@ Module.register('MMM-Sonos-Control', {
   },
 
   getMusicPlayer: function() {
-    var animated_class = this.config.animatedVinyl ? 'spin' : '';
+    var animated_class = (this.config.animatedVinyl&&this.current_song.is_playing) ? 'spin' : '';
     return '<div class="player">\
       <div class="album-cover">\
         <img src="' + this.current_song.albumArtUrl + '" />\
